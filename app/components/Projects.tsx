@@ -1,33 +1,18 @@
 import { motion, useAnimate, usePresence } from "framer-motion";
 import { useEffect } from "react";
+import { jetBrains } from "../ui/fonts";
 
 const Projects = () => {
-  const [isPresent, safeToRemove] = usePresence();
-  const [scope, animate] = useAnimate();
-
-  useEffect(() => {
-    if (isPresent) {
-      const enterAnimation = async () => {
-        await animate(scope.current, { opacity: 1 });
-        await animate("li", { opacity: 1, x: 0 });
-      };
-      enterAnimation();
-    } else {
-      const exitAnimation = async () => {
-        await animate("li", { opacity: 0, x: -100 });
-        await animate(scope.current, { opacity: 0 });
-        safeToRemove();
-      };
-
-      exitAnimation();
-    }
-  }, [isPresent]);
+  
 
   return (
-    <>
-      <motion.circle color={'red'} cx={0} ref={scope}/>
+   <div
+         className={`${jetBrains.className} flex h-screen flex-col gap-4 px-6 py-4 rounded-lg shadow-lg`}
+       >
+        <h1 className="text-2xl font-bold">My Projects</h1>
+      <motion.circle color={'red'} cx={0} cy={0} r={50} />
         
-    </>
+    </div>
   );
 };
 export default Projects;

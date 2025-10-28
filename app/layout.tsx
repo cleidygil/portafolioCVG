@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import './globals.css'
 import { bitcount, oxygen } from "./ui/fonts";
 
 export const metadata: Metadata = {
