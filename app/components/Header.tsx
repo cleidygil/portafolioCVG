@@ -1,10 +1,9 @@
-"use client";
 
 import { jetBrains } from "../ui/fonts";
 
 const Header = () => {
   return (
-    <section className={`bg-center h-screen bg-no-repeat  bg-gray-700 bg-blend-multiply`}>
+    <section className="bg-center h-screen bg-no-repeat  bg-gray-700 bg-blend-multiply">
       <div className="flex rounded-lg shadow-lg">
         <div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
           <span

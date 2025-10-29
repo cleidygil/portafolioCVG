@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import './globals.css'
-import { bitcount, oxygen } from "./ui/fonts";
+import { bitcount } from "./ui/fonts";
+import './globals.css';
 
 export const metadata: Metadata = {
   title: "Cleidy Gil | Portfolio",
@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${bitcount.className} bg-white dark:bg-black text-black dark:text-white transition-colors duration-500`}
+        className={`${bitcount.className}  bg-white dark:bg-black text-black dark:text-white transition-colors duration-500`}
       >
         {children}
       </body>
